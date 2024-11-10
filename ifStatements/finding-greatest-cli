@@ -1,0 +1,17 @@
+#! /bin/bash
+
+if [ $# -ne 2 ]
+then
+echo "You Should provide exactly two arguments"
+exit 1
+fi
+x=$1
+y=$2
+sum=`expr $x + $y `
+if [ $? -ne 0 ]
+then
+echo "You should provide integer numbers only"
+exit 2
+else
+echo "The Sum:$sum"
+fi
